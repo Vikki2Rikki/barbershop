@@ -30,7 +30,7 @@
       </nav>
       <div class="header-info-wrap">
           <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-          <button type="button" class="header-btn btn">Online-booking</button>
+          <button type="button" data-modal-open class="header-btn btn">Online-booking</button>
       </div>
       
     </div>
@@ -39,18 +39,20 @@
       <!-- ---------- Hero --------- -->
       <section class="hero">
         <div class="container hero-container">
-        <ul class="hero-list list">
-          <li class="hero-item">
-            <a href="" target="_blank" rel="noreferrer noopener nofollow" class="hero-link link"
-              >Instagram</a
-            >
-          </li>
-          <li class="hero-item">
-            <a href="" target="_blank" rel="noreferrer noopener nofollow" class="hero-link link"
-              >Youtube</a
-            >
-          </li>
-        </ul>
+       <div class="hero-soc">
+          <ul class="hero-list list">
+            <li class="hero-item">
+              <a href="" target="_blank" rel="noreferrer noopener nofollow" class="hero-link link"
+                >Instagram</a
+              >
+            </li>
+            <li class="hero-item">
+              <a href="" target="_blank" rel="noreferrer noopener nofollow" class="hero-link link"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+       </div>
        <div class="hero-wrap">
           <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
           <h1 class="hero-title">BarberShop</h1>
@@ -96,7 +98,7 @@
             same wave" with clients. Therefore, we are always ready to improve
             everyone who comes to us!
           </p>
-          <button type="button" class="about-btn btn">online-booking</button>
+          <button type="button" data-modal-open class="about-btn btn">online-booking</button>
         </div>
       </div>
       </section>
@@ -143,7 +145,7 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="price-btn btn">online-booking</button>
+        <button type="button" data-modal-open class="price-btn btn">online-booking</button>
       </div>
       </section>
       <!-- benefits -->
@@ -184,12 +186,15 @@
         <h2 class="barbers-title title">Our barbers</h2>
         <ul class="barbers-list list">
           <li class="barbers-item">
-            <img
-              src="./images/barbers/img1.jpg"
-              alt="barber face"
-              width="370"
-              height="346"
-            />
+            <div class="barbers-top-wrap">
+              <img
+                src="./images/barbers/img1.jpg"
+                alt="barber face"
+                width="370"
+                height="346"
+              />
+              <p class="barbers-top-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium voluptates, debitis eveniet natus animi modi voluptatibus, exercitationem fugit tempore voluptas sed deserunt sint incidunt dolorem neque a consequatur ab enim?</p>
+            </div>
            <div class="barbers-info">
               <h3 class="barbers-item-title">John Smith</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -218,12 +223,15 @@
            </div>
           </li>
           <li class="barbers-item">
-            <img
-              src="./images/barbers/img2.jpg"
-              alt="barber face"
-              width="370"
-              height="346"
-            />
+         <div class="barbers-top-wrap">
+              <img
+                src="./images/barbers/img2.jpg"
+                alt="barber face"
+                width="370"
+                height="346"
+              />
+              <p class="barbers-top-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium voluptates, debitis eveniet natus animi modi voluptatibus, exercitationem fugit tempore voluptas sed deserunt sint incidunt dolorem neque a consequatur ab enim?</p>
+         </div>
            <div class="barbers-info">
               <h3 class="barbers-item-title">Michele Doe</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -252,12 +260,15 @@
            </div>
           </li>
           <li class="barbers-item">
-            <img
-              src="./images/barbers/img3.jpg"
-              alt="barber face"
-              width="370"
-              height="346"
-            />
+          <div class="barbers-top-wrap">
+              <img
+                src="./images/barbers/img3.jpg"
+                alt="barber face"
+                width="370"
+                height="346"
+              />
+              <p class="barbers-top-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium voluptates, debitis eveniet natus animi modi voluptatibus, exercitationem fugit tempore voluptas sed deserunt sint incidunt dolorem neque a consequatur ab enim?</p>
+          </div>
            <div class="barbers-info">
               <h3 class="barbers-item-title">Alan Black</h3>
               <p class="barbers-item-text">Extreme Barber</p>
@@ -408,7 +419,17 @@
           >
         </li>
       </div>
-  
+      </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal >
+      <div class="modal">
+        <button type="button" data-modal-close="" class="modal-close">
+          <svg class="close-btn" width="40" height="40">
+            <use href="./images/sprite.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@
   --dark-title-color: #303030;
   --light-title-color: #fff;
   --prime-bg-color: #fff;
+  --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: "open sans", sans-serif;
@@ -82,6 +83,12 @@ img {
   border-radius: 25px;
   border: 1px solid var(--brend-color);
   background-color: transparent;
+  transition: background-color var(--tra), color var(--tra);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--brend-color);
+  color: var(--light-title-color);
 }
 .visually-hidden {
   position: absolute;
@@ -98,7 +105,10 @@ img {
 
 /* ----------header---------- */
 .header {
-  background-color: grey;
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-container {
   display: flex;
@@ -107,6 +117,7 @@ img {
 .header-navigation {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 .header-logo {
   margin-right: 131px;
@@ -115,14 +126,14 @@ img {
   display: flex;
   gap: 30px;
 }
-.header-item {
-}
+
 .header-link {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.33;
   letter-spacing: 1.2px;
   color: #fff;
+  transition: color var(--tra);
 }
 .header-link:hover,
 .header-link:focus {
@@ -139,28 +150,50 @@ img {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-right: 43px;
+  transition: color var(--tra);
 }
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--brend-color);
+}
+
 .header-btn {
   color: #fff;
 }
 
 /* -----------hero ------------- */
-.hero {
-}
+
 .hero-container {
   display: flex;
 }
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
 }
-.hero-item {
+.hero-list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
 }
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--dark-title-color);
+}
+
 .hero-link {
   color: var(--dark-title-color);
   font-size: 11px;
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: 2.2px;
+  transition: color var(--tra);
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -350,6 +383,7 @@ img {
   margin-top: 30px;
 }
 .benefits-item-number {
+  position: relative;
   color: var(--dark-title-color);
   text-align: center;
   font-size: 42px;
@@ -360,6 +394,8 @@ img {
 }
 .benefits-item-number::after {
   content: "+";
+  position: absolute;
+  top: 7px;
   color: var(--brend-color);
   font-size: 16px;
   font-weight: 600;
@@ -409,8 +445,30 @@ img {
 }
 
 .barbers-item {
-  outline: 1px solid red;
   flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.barbers-top-wrap:hover .barbers-top-text {
+  transform: translateY(0%);
+}
+
+.barbers-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-top-text {
+  position: absolute;
+  top: 0;
+  background-color: hwb(25 0% 0% / 0.37);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--light-title-color);
+  padding: 20px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--tra);
+  overflow: auto;
 }
 .barbers-info {
   padding-top: 30px;
@@ -449,6 +507,7 @@ img {
   justify-content: center;
   background-color: #fff;
   border-radius: 50%;
+  transition: fill var(--tra);
 }
 .barbers-soc-link:hover,
 .barbers-soc-link:focus {
@@ -574,4 +633,45 @@ img {
 .footer-item-link:hover,
 .footer-item-link:focus {
   color: var(--brend-color);
+}
+
+/* ======Modal window ========= */
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.467);
+  transition: opacity var(--tra), visibility var(--tra);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 500px;
+  min-height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform var(--tra);
+  /* padding-top: 118px;
+  padding-left: 40px; */
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+  /* transform: translate(350%, -50%) scale(0); */
+}
+.modal-close {
+  border: 1px solid #999999;
+  border-radius: 50%;
+  background-color: #555555;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
 }
