@@ -89,7 +89,7 @@
     margin-bottom: 6px;
   }
   .benefits-item-number::after {
-    content: "+";
+    content: '+';
     position: absolute;
     top: 7px;
     color: var(--brend-color);
@@ -245,8 +245,8 @@
   line-height: 1.67;
   letter-spacing: 0.36px;
 }
-.contacts-address-link {
-}
+/* .contacts-address-link {
+} */
 
 .contacts-address-item.bold {
   font-weight: 700;

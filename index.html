@@ -24,28 +24,80 @@
   </head>
   <body>
     <!-- ------- Header ----- -->
-    <!-- <header class="header">
-    
+    <header class="header">
       <div class="container header-container">
       <nav class="header-navigation">
       <a href="" class="header-logo">
-        <img src="./images/logo.svg" alt="BarberShop logo" />
+        <svg class="logo-pic" width="68" height="55">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
       </a>
-      
         <ul class="header-list list">
-          <li class="header-item"><a href="#about" class="header-link link">about</a></li>
-          <li class="header-item"><a href="" class="header-link link">services and prices</a></li>
-          <li class="header-item"><a href="" class="header-link link">barbers</a></li>
-          <li class="header-item"><a href="" class="header-link link">contacts</a></li>
+          <li class="header-item">
+            <a href="#about" class="header-link link">about</a></li>
+          <li class="header-item">
+            <a href="" class="header-link link">services and prices</a></li>
+          <li class="header-item">
+            <a href="" class="header-link link">barbers</a></li>
+          <li class="header-item">
+            <a href="" class="header-link link">contacts</a></li>
         </ul>
       </nav>
       <div class="header-info-wrap">
           <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
           <button type="button" data-modal-open class="header-btn btn">Online-booking</button>
+     <button type="button" class="menu-open-btn " data-menu-open>
+      <svg class="burger-menu-pic" width="40" height="40">
+        <use href="./images/sprite.svg#icon-burger-menu"></use>
+      </svg>
+     </button>
+        </div>
+      <div class="mob-menu is-hidden" data-menu> 
+     <div class="mob-menu-container container">
+       <div>
+            <button type="button" class="mob-close-btn
+            " data-menu-close>X</button>
+            <nav>
+              <ul class="mob-menu-list list">
+                <li class="mob-menu-item">
+                  <a href="#about" class="mob-menu-link link">about</a></li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">services and prices</a></li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">barbers</a></li>
+                <li class="mob-menu-item">
+                  <a href="" class="mob-menu-link link">contacts</a></li>
+              </ul>
+            </nav>
+       </div>
+        <div>
+            <a href="tel:+380441111111" class="mob-menu-tel link">+38 044 111 11 11</a>
+            <button type="button" data-modal-open class="mob-menu-btn btn">Online-booking</button>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  class="mob-soc-link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  class="mob-soc-link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+        </div>
+     </div>
       </div>
-      
     </div>
-    </header> -->
+    </header> 
     <main>
       <!-- ---------- Hero --------- -->
       <section class="hero">
@@ -210,12 +262,20 @@
           <ul class="barbers-list list">
             <li class="barbers-item">
               <div class="barbers-top-wrap">
-                <img
-                  src="./images/barbers/img1.jpg"
+                <picture>
+                  <source media="(min-width:1200px)" 
+                  srcset="./images/desktop/barbers/smith-desktop@.jpg 1x,  ./images/desktop/barbers/smith-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)" 
+                  srcset="./images/tablet/barbers/smith-tablet@.jpg 1x, ./images/tablet/barbers/smith-tablet@2x.jpg 2x" >
+                  <source media="(max-width:767px )" 
+                  srcset="./images/mobile/barbers/smith-mobile@.jpg 1x, ./images/mobile/barbers/smith-mobile@2x.jpg 2x">
+                  <img
+                  src="./images/desktop/barbers/smith-desktop@.jpg"
                   alt="barber face"
-                  width="370"
-                  height="346"
+                  width="450"
                 />
+                </picture>
+               
                 <p class="barbers-top-text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Praesentium voluptates, debitis eveniet natus animi modi
@@ -260,12 +320,19 @@
             </li>
             <li class="barbers-item">
               <div class="barbers-top-wrap">
-                <img
-                  src="./images/barbers/img2.jpg"
+                <picture>
+                  <source media="(min-width:1200px)" 
+                  srcset="./images/desktop/barbers/doe-desktop@.jpg 1x,  ./images/desktop/barbers/doe-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)" 
+                  srcset="./images/tablet/barbers/doe-tablet@.jpg 1x, ./images/tablet/barbers/doe-tablet@2x.jpg 2x" >
+                  <source media="(max-width:767px )" 
+                  srcset="./images/mobile/barbers/doe-mobile@.jpg 1x, ./images/mobile/barbers/doe-mobile@2x.jpg 2x">
+                  <img
+                  src="./images/desktop/barbers/doe-desktop.jpg"
                   alt="barber face"
-                  width="370"
-                  height="346"
+                  width="450"
                 />
+                </picture>
                 <p class="barbers-top-text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Praesentium voluptates, debitis eveniet natus animi modi
@@ -310,12 +377,19 @@
             </li>
             <li class="barbers-item">
               <div class="barbers-top-wrap">
-                <img
-                  src="./images/barbers/img3.jpg"
+                <picture>
+                  <source media="(min-width:1200px)" 
+                  srcset="./images/desktop/barbers/Black@.jpg 1x,  ./images/desktop/barbers/black-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)" 
+                  srcset="./images/tablet/barbers/black-tablet@.jpg 1x, ./images/tablet/barbers/black-tablet@2x.jpg 2x" >
+                  <source media="(max-width:767px )" 
+                  srcset="./images/mobile/barbers/black-mobile@.jpg 1x, ./images/mobile/barbers/black-mobile@2x.jpg 2x">
+                  <img
+                  src="./images/desktop/barbers/black-desktop.jpg"
                   alt="barber face"
-                  width="370"
-                  height="346"
+                  width="450"
                 />
+                </picture>
                 <p class="barbers-top-text">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Praesentium voluptates, debitis eveniet natus animi modi
@@ -370,36 +444,64 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./images/gallery/img-1.jpg"
+              <picture>
+                <source media="(min-width:1200px)" 
+                srcset="./images/desktop/gallery/gallery1-desktop@.jpg 1x, ./images/desktop/gallery/gallery1-desktop@2x.jpg 2x">
+                <source media="(min-width:768px )" 
+                srcset="./images/tablet/gallery/gallery1-tablet@.jpg 1x, ./images/tablet/gallery/gallery1-tablet@2x.jpg 2x">
+                <source media="(max-width:767px )" 
+                srcset="./images/mobile/gallery/gallery1-mobile@.jpg 1x, ./images/mobile/gallery/gallery1-mobile@2x.jpg 2x">
+                <img
+                src="./images/desktop/gallery/gallery1-desktop.jpg"
                 alt="barber work"
-                width="270"
-                height="360"
+                width="418"
               />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery/img-2.jpg"
+              <picture>
+                <source media="(min-width:1200px)" 
+                srcset="./images/desktop/gallery/gallery2-desktop@.jpg 1x, ./images/desktop/gallery/gallery2-desktop@2x.jpg 2x">
+                <source media="(min-width:768px )" 
+                srcset="./images/tablet/gallery/gallery2-tablet@.jpg 1x, ./images/tablet/gallery/gallery2-tablet@2x.jpg 2x">
+                <source media="(max-width:767px )" 
+                srcset="./images/mobile/gallery/gallery2-mobile@.jpg 1x, ./images/mobile/gallery/gallery2-mobile@2x.jpg 2x">
+                <img
+                src="./images/desktop/gallery/gallery2-desktop.jpg"
                 alt="barber work"
-                width="270"
-                height="360"
+                width="418"
               />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./images/gallery/img-3.jpg"
+              <picture>
+                <source media="(min-width:1200px)" 
+                srcset="./images/desktop/gallery/gallery3-desktop@.jpg 1x, ./images/desktop/gallery/gallery3-desktop@2x.jpg 2x">
+                <source media="(min-width:768px )" 
+                srcset="./images/tablet/gallery/gallery3-tablet@.jpg 1x, ./images/tablet/gallery/gallery3-tablet@2x.jpg 2x">
+                <source media="(max-width:767px )" 
+                srcset="./images/mobile/gallery/gallery3-mobile@.jpg 1x, ./images/mobile/gallery/gallery3-mobile@2x.jpg 2x">
+                <img
+                src="./images/desktop/gallery/gallery3-desktop.jpg"
                 alt="barber work"
-                width="270"
-                height="360"
+                width="418"
               />
+              </picture>
             </li>
             <li>
-              <img
-                src="./images/gallery/img-4.jpg"
+              <picture>
+                <source media="(min-width:1200px)" 
+                srcset="./images/desktop/gallery/gallery4-desktop@.jpg 1x, ./images/desktop/gallery/gallery4-desktop@2x.jpg 2x">
+                <source media="(min-width:768px )" 
+                srcset="./images/tablet/gallery/gallery4-tablet@.jpg 1x, ./images/tablet/gallery/gallery4-tablet@2x.jpg 2x">
+                <source media="(max-width:767px )" 
+                srcset="./images/mobile/gallery/gallery4-mobile@.jpg 1x, ./images/mobile/gallery/gallery4-mobile@2x.jpg 2x">
+                <img
+                src="./images/desktop/gallery/gallery4-desktop.jpg"
                 alt="barber work"
-                width="270"
-                height="360"
+                width="418"
               />
+              </picture>
             </li>
           </ul>
         </div>
@@ -523,5 +625,6 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

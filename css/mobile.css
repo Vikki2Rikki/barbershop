@@ -2,6 +2,10 @@
   .container {
     max-width: 448px;
   }
+  /* ----------header------ */
+  .header-container {
+    max-width: 100%;
+  }
   /* ------hero---------- */
   .hero-container {
     max-width: 100%;
