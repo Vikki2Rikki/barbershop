@@ -3,6 +3,7 @@
     max-width: 720px;
   }
   /* ----------header------ */
+
   /* .header-container {
     justify-content: space-between;
   } */
@@ -30,6 +31,7 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
+    align-items: center;
     /* margin-left: auto; */
     margin-right: 0;
   }
@@ -169,14 +171,13 @@
   }
 
   .barbers {
-    padding-top: 100px;
+    margin-bottom: 100px;
     padding-bottom: 100px;
   }
 
   /* ====Gallery==== */
   .gallery {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 106px;
   }
   .gallery-suptitle {
     margin-bottom: 44px;
@@ -191,10 +192,14 @@
 
 /* ==========footer========== */
 .footer-container {
-  padding-top: 56px;
-  padding-bottom: 56px;
+  height: 127px;
 }
 
 .footer-text {
-  padding-bottom: 24px;
+  padding-bottom: 56px;
+  padding-top: 56px;
+}
+.footer-list {
+  padding-bottom: 56px;
+  padding-top: 56px;
 }

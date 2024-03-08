@@ -3,6 +3,10 @@
     max-width: 1200px;
   }
   /* -------header--------- */
+  .header-info-wrap {
+    flex-direction: row;
+    gap: 43px;
+  }
   /* -------hero ---------- */
 
   .hero-wrap {
@@ -123,7 +127,7 @@
  } */
   /* -----Our burbers------ */
   .barbers {
-    padding-top: 120px;
+    margin-bottom: 120px;
     padding-bottom: 120px;
   }
 
@@ -138,8 +142,7 @@
 
   /* =====Gallery===== */
   .gallery {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    margin-bottom: 120px;
   }
 
   .gallery-item {

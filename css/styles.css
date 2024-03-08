@@ -511,8 +511,8 @@ overflow: auto;
 }
 /* -----Our burbers------ */
 .barbers {
-  padding-top: 84px;
-  padding-bottom: 84px;
+ margin-bottom: 84px;
+ padding-bottom: 84px;
   background-color: #f7f7f7;
 }
 .barbers-suptitle {
@@ -531,7 +531,6 @@ overflow: auto;
 
 .barbers-item {
   width: 100%;
-  /* flex-basis: calc((100% - 2 * 30px) / 3); */
 }
 
 .barbers-top-wrap:hover .barbers-top-text {
@@ -602,8 +601,7 @@ overflow: auto;
 
 /* ======== Gallery -------- */
 .gallery {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  margin-bottom: 84px;
 }
 .gallery-suptitle {
   margin-bottom: 71px;
@@ -612,13 +610,11 @@ overflow: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  /* column-gap: 30px;
-  row-gap: 45px; */
 }
 
 .gallery-item {
   width: 100%;
-  /* flex-basis: calc((100% - 3 * 30px) / 4); */
+  
 }
 /* ======On-line/Contacts===== */
 .contacts-wrap {
@@ -742,8 +738,7 @@ overflow: auto;
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 44px;
-  padding-bottom:79px;
+  height: 138px;
 }
 .footer-text {
   color: #9da4bd;
@@ -751,12 +746,15 @@ overflow: auto;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.2px;
-  padding-top: 35px;
+  padding-top: 79px;
+  padding-bottom: 44px;
 }
 .footer-list {
   display: flex;
   gap: 40px;
   align-items: center;
+  padding-bottom: 79px;
+  padding-top: 44px;
 }
 
 .footer-list::before {
@@ -772,6 +770,7 @@ overflow: auto;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.2px;
+ 
 }
 .footer-item-link:hover,
 .footer-item-link:focus {
